@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#f6f4ee"/><title>Stillroom — Visual Asset Register</title><link rel="stylesheet" href="/assets/style.css"/></head><body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-logo">s<span>.</span></div><div><div class="brand-name">stillroom</div><div class="brand-sub">VISUAL ASSET REGISTER</div></div></div>
+  <div class="side-section">WORKSPACE</div>
+  <nav aria-label="Main navigation">
+    <button class="nav active" data-view="home"><span class="nav-icon">◫</span>Overview</button>
+    <button class="nav" data-view="collection"><span class="nav-icon">▦</span>Collection <span id="navCount" class="nav-count">0</span></button>
+    <button class="nav" data-view="search"><span class="nav-icon">⌕</span>Visual search</button>
+    <button class="nav" data-view="scan"><span class="nav-icon">▧</span>Scene scan</button>
+  </nav>
+  <div class="side-section methods-label">REFERENCE</div>
+  <nav><button class="nav" data-view="method"><span class="nav-icon">◎</span>How it works</button></nav>
+  <div class="sidebar-bottom"><div class="status-dot"></div><div><strong>On-device processing</strong><small>Your images remain on this computer</small></div></div>
+</aside>
+<div class="main"><header class="topbar"><div class="breadcrumb">WORKSPACE <span>/</span> <b id="breadcrumb">OVERVIEW</b></div><div class="top-right"><span class="session"><i></i> LOCAL SESSION</span><span class="avatar">S</span></div></header>
+<main id="view" aria-live="polite"></main><footer>STILLROOM / VISUAL ASSET REGISTER <span>Designed for real spaces. Built for clear decisions.</span></footer></div>
+</div>
+<div id="modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-panel"><div class="modal-head"><div><div class="eyebrow">NEW RECORD</div><h2 id="modalTitle">Add to collection</h2></div><button class="icon-button" id="closeModal" aria-label="Close">×</button></div><form id="addForm"><div class="field"><label for="itemName">Item name <span>*</span></label><input id="itemName" name="name" required maxlength="100" placeholder="e.g. Network switch / Lab A"/></div><div class="field-grid"><div class="field"><label for="category">Category</label><select name="category" id="category"><option>Equipment</option><option>Electronics</option><option>Books & documents</option><option>Furniture</option><option>Supplies</option><option>Other</option></select></div><div class="field"><label for="location">Stored at</label><input id="location" name="location" maxlength="100" placeholder="e.g. Lab 2 · Shelf B"/></div></div><div class="field"><label for="notes">Notes</label><textarea id="notes" name="notes" maxlength="500" rows="2" placeholder="Model, serial label, condition, or additional details"></textarea></div><div class="field"><label>Reference photograph <span>*</span></label><label class="file-drop" id="catalogDrop"><input id="itemImage" name="image" type="file" accept="image/*" required/><span class="upload-symbol">↑</span><strong id="catalogFileLabel">Choose an image or drop it here</strong><small>JPG, PNG, HEIC* or other images supported by your Python image libraries · Max 12 MB</small></label></div><div class="modal-actions"><button type="button" class="btn quiet" id="cancelModal">Cancel</button><button class="btn primary" type="submit" id="submitItem">Save item <span>↗</span></button></div></form></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="/assets/app.js" defer></script></body></html>
